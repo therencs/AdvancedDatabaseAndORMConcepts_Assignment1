@@ -12,8 +12,16 @@
                 if (string.IsNullOrEmpty(value) || value.Length < 3 )
                 {
                     throw new ArgumentOutOfRangeException(nameof(value), "Brand name must be at least three characters in length.");
+                } else
+                {
+                    _name = value;
                 }
             }
+        }
+
+        public Brand()
+        {
+
         }
 
         public HashSet<Laptop> Laptops = new HashSet<Laptop>();
